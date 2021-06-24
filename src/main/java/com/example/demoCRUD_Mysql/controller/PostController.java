@@ -28,16 +28,16 @@ public class PostController {
 
         List<Post> posts = postService.findAllByOrderByIdDesc();
         model.addAttribute("posts", posts);
-        return "index";
+        return "index.html";
     }
 
 
-    @RequestMapping("/index")
+    @RequestMapping("/index.html")
     public String back(Model model) {
 
         List<Post> posts = postService.findAllByOrderByIdDesc();
         model.addAttribute("posts",  posts);
-        return "index";
+        return "index.html";
     }
 
     @RequestMapping(value = "post")
